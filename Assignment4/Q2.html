@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-4</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="/submit" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="'name" required><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="example@domain.com" required><br><br>
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" placeholder="123-456-7890" required><br><br>
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="male" id="male" required><br>
+        <label for="male">Male</label><br><br>
+        <input type="radio" name="gender" value="female" id="female" required><br>
+        <label for="female">Female</label><br><br>
+        <input type="radio" name="gender" value="other" id="other" required><br>
+        <label for="other">Other</label><br><br>
+
+        <label for="age-group">Age Group:</label><br>
+        <select id="age-group" name="age-group" required>
+            <option value="">Select an option</option>
+            <option value="18-25">18-25</option>
+            <option value="26-35">26-35</option>
+            <option value="36-45">36-45</option>
+            <option value="46-55">46-55</option>
+            <option value="56+">56+</option>
+        </select>
+
+        <label for="topics-of-interest">Topics of Interest</label><br>
+        <input type="checkbox" name="topics-of-interest" value="sports" id="sports">
+        <label for="topic1">Sports</label><br>
+        <input type="checkbox" name="topics-of-interest" value="technology" id="technology">
+        <label for="topic2">Technology</label><br>
+        <input type="checkbox" name="topics-of-interest" value="politics" id="politics">
+        <label for="topic3">Politics</label><br>
+        <input type="checkbox" name="topics-of-interest" value="science" id="science">
+        <label for="topic4">Science</label><br>
+        <input type="checkbox" name="topics-of-interest" value="other" id="other-interest">
+        <label for="other-interest">Other</label><br>
+
+        <label for="additional-comments">Additional comments</label><br>
+        <textarea id="additional-comments" name="additional-comments" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
