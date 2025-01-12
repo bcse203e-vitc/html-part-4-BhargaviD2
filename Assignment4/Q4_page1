@@ -3,137 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        .form-container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .form-page {
-            display: none;
-        }
-
-        .form-page.active {
-            display: block;
-        }
-
-        .form-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .form-navigation button {
-            padding: 10px 15px;
-            font-size: 14px;
-            color: #fff;
-            background: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .form-navigation button:disabled {
-            background: #cccccc;
-        }
-
-        .form-navigation button:hover:not(:disabled) {
-            background: #0056b3;
-        }
-    </style>
+    <title>Personal Details</title>
 </head>
 <body>
-    <div class="form-container">
-        <!-- Page 1: Personal Details -->
-        <div class="form-page active" id="page-1">
-            <h2>Personal Details</h2>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="address">Address:</label><br>
-            <textarea id="address" name="address" required></textarea><br><br>
-            <label for="contact">Contact Info:</label><br>
-            <input type="text" id="contact" name="contact" required><br><br>
-        </div>
+    <h1>Job Application - Page 1: Personal Details</h1>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
 
-        <!-- Page 2: Educational Background -->
-        <div class="form-page" id="page-2">
-            <h2>Educational Background</h2>
-            <label for="degree">Degree:</label><br>
-            <input type="text" id="degree" name="degree" required><br><br>
-            <label for="year">Year of Passing:</label><br>
-            <input type="number" id="year" name="year" required><br><br>
-            <label for="institution">Institution Name:</label><br>
-            <input type="text" id="institution" name="institution" required><br><br>
-        </div>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        <br><br>
 
-        <!-- Page 3: Work Experience -->
-        <div class="form-page" id="page-3">
-            <h2>Work Experience</h2>
-            <label for="company">Company Name:</label><br>
-            <input type="text" id="company" name="company" required><br><br>
-            <label for="designation">Designation:</label><br>
-            <input type="text" id="designation" name="designation" required><br><br>
-            <label for="duration">Duration:</label><br>
-            <input type="text" id="duration" name="duration" required><br><br>
-            <label for="resume">Attach Resume:</label><br>
-            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx"><br><br>
-        </div>
+        <label for="contact">Contact Info:</label>
+        <input type="tel" id="contact" name="contact" required>
+        <br><br>
 
-        <!-- Navigation Buttons -->
-        <div class="form-navigation">
-            <button type="button" id="prevBtn" disabled>Previous</button>
-            <button type="button" id="nextBtn">Next</button>
-        </div>
-    </div>
-
-    <script>
-        const pages = document.querySelectorAll('.form-page');
-        const nextBtn = document.getElementById('nextBtn');
-        const prevBtn = document.getElementById('prevBtn');
-        let currentPage = 0;
-
-        function updatePage() {
-            pages.forEach((page, index) => {
-                page.classList.toggle('active', index === currentPage);
-            });
-            prevBtn.disabled = currentPage === 0;
-            nextBtn.textContent = currentPage === pages.length - 1 ? 'Submit' : 'Next';
-        }
-
-        nextBtn.addEventListener('click', () => {
-            if (currentPage < pages.length - 1) {
-                currentPage++;
-                updatePage();
-            } else {
-                alert('Form submitted successfully!');
-            }
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (currentPage > 0) {
-                currentPage--;
-                updatePage();
-            }
-        });
-
-        updatePage();
-    </script>
+        <a href="educational_background.html">
+            <button type="button">Next</button>
+        </a>
+    </form>
 </body>
 </html>
-
