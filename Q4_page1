@@ -20,7 +20,7 @@
         <input type="tel" id="contact" name="contact" required>
         <br><br>
 
-        <a href="educational_background.html">
+        <a href="Q4_page2.html">
             <button type="button">Next</button>
         </a>
     </form>
